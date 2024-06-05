@@ -17,7 +17,7 @@ function App() {
 
       <main className="p-8">
         <section className="hero bg-blue-500 text-white p-8">
-          <h2 className="text-3xl">Welcome to Our Product</h2>
+          <h2 className="text-3xl">Welcome to Our Product!</h2>
           <button className="bg-white text-blue-500 px-4 py-2 mt-4" onClick={togglePopup}>
             Buy Now
           </button>
