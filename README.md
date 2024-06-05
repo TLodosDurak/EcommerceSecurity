@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Secure E-commerce Application with Custom Payment Encryption
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project implements a comprehensive cybersecurity system for data encryption in an e-commerce application. The application is built with React for the frontend and Express.js for the backend, utilizing custom encryption methods for secure payment processing.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
+- Secure user registration and login with encrypted credentials.
+- Single-page landing page showcasing an e-commerce product.
+- Custom payment processing with encrypted data.
+- Local file storage for user and payment data.
 
-### `npm start`
+## Technologies Used
+- Frontend: React.js, Tailwind CSS, shadcn
+- Backend: Express.js
+- Encryption: Node.js Crypto module
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup and Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js (v12 or higher)
+- npm (v6 or higher)
+- Git
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-usernhttps://github.com/TLodosDurak/EcommerceSecurity.git
+2. **Set up frontend:**
+    ```sh
+    cd frontend
+    npm install
+3. **Set up backend:**
+    ```sh
+    cd ../backend
+    npm install
+### Running the Application
 
-### `npm run build`
+1. **Start the backend server:**
+    ```sh
+    cd backend
+    node server.js
+2. **Start the frontend development server:**
+    ```sh
+    cd ../frontend
+    npm start
+3. **Access the application:**
+- Open http://localhost:3000 to view it in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="image.png" alt="Project Structure" width="200">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Acknowledgments
 
-### `npm run eject`
+- This project was bootstrapped with Create React App.
+- Styling is achieved using Tailwind CSS.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- This project is licensed under the MIT License - see the LICENSE file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
