@@ -16,8 +16,8 @@ function PaymentForm({ togglePopup }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-      <div className="bg-white p-8 rounded">
+    <div className="fixed inset-0 bg-opacity-75 flex items-center justify-center">
+      <div className="bg-base p-8 rounded">
         <h2 className="text-2xl mb-4">Payment Form</h2>
         <form onSubmit={handleSubmit}>
           <input

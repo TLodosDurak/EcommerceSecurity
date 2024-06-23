@@ -1,4 +1,6 @@
 /* App.css */
+/* Grid based layut system. Divides into 3 columns. Middle one taking most space and being the content area.*/
+/*Side grids are used as margins as they are empty(unless fullbleed)*/
 .wrapper {
   display: grid;
   grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;
