@@ -16,40 +16,40 @@ function PaymentForm({ togglePopup }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-opacity-75 flex items-center justify-center">
-      <div className="bg-base p-8 rounded">
-        <h2 className="text-2xl mb-4">Payment Form</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            className="border p-2 w-full mb-4"
-            name="cardNumber"
-            onChange={handleChange}
-            placeholder="Card Number"
-            value={paymentDetails.cardNumber}
-          />
-          <input
-            className="border p-2 w-full mb-4"
-            name="expiry"
-            onChange={handleChange}
-            placeholder="Expiry Date"
-            value={paymentDetails.expiry}
-          />
-          <input
-            className="border p-2 w-full mb-4"
-            name="cvv"
-            onChange={handleChange}
-            placeholder="CVV"
-            value={paymentDetails.cvv}
-          />
-          <button className="bg-blue-500 text-white px-4 py-2" type="submit">
+    <dialog open className="modal modal-open">
+      <form method="dialog" className="modal-box" onSubmit={handleSubmit}>
+        <h3 className="font-bold text-lg">Payment Form</h3>
+        <input
+          className="input input-bordered w-full mt-4"
+          name="cardNumber"
+          onChange={handleChange}
+          placeholder="Card Number"
+          value={paymentDetails.cardNumber}
+        />
+        <input
+          className="input input-bordered w-full mt-4"
+          name="expiry"
+          onChange={handleChange}
+          placeholder="Expiry Date"
+          value={paymentDetails.expiry}
+        />
+        <input
+          className="input input-bordered w-full mt-4"
+          name="cvv"
+          onChange={handleChange}
+          placeholder="CVV"
+          value={paymentDetails.cvv}
+        />
+        <div className="modal-action">
+          <button className="btn btn-primary" type="submit">
             Pay
           </button>
-          <button className="bg-gray-500 text-white px-4 py-2 ml-4" onClick={togglePopup}>
+          <button className="btn" onClick={togglePopup}>
             Cancel
           </button>
-        </form>
-      </div>
-    </div>
+        </div>
+      </form>
+    </dialog>
   );
 }
 
