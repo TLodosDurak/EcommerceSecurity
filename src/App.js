@@ -26,13 +26,13 @@ function App() {
 
   return (
     <div className="App">
-      <main className="wrapper mt-16">
-        <section className="full-bleed">
+        <nav>
           <NavbarCustom toggleTheme={toggleTheme} theme={theme}/>
+        </nav>
+      <main className="wrapper mt-16">
+        <section className="row-start-1 row-span-1  bg-gradient-to-r from-primary to-secondary full-bleed h-[400px]">
         </section>
-        <section className="row-start-2 row-span-1  bg-gradient-to-r from-primary to-secondary full-bleed h-[400px] z-0">
-        </section>
-        <section className="row-start-2 relative my-8 z-1">
+        <section className="row-start-1 relative my-8">
           <h2 className="text-3xl text-secondary-content mb-4 text-center">Welcome to Oy Shirts!</h2>
           <div className="flex flex-grow-1 w-full justify-between row-start-2 row-span-1">
             <button className="btn btn-primary" onClick={togglePopup}>
@@ -42,7 +42,7 @@ function App() {
           </div>
         </section>
 
-        <section className="features my-8 row-start-3">
+        <section className="features my-8">
           <h2 className="text-2xl">Features</h2>
           <ul>
             <li>High-quality fabric</li>
@@ -52,12 +52,12 @@ function App() {
           </ul>
         </section>
 
-        <section className="pricing my-8 row-start-4">
+        <section className="pricing my-8">
           <h2 className="text-2xl">Pricing</h2>
           <p>Each Oy Shirt is available for $25. Custom designs may have an additional cost.</p>
         </section>
 
-        <section className="faq my-8 row-start-5">
+        <section className="faq my-8">
           <h2 className="text-2xl">FAQ</h2>
           <ul>
             <li><strong>Q:</strong> What sizes are available?<br /><strong>A:</strong> Sizes range from S to XXL.</li>

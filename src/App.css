@@ -9,6 +9,7 @@
 
 .wrapper > * {
   grid-column: 2;
+  z-index: 1;
 }
 
 .full-bleed {
