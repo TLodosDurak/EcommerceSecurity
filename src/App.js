@@ -39,9 +39,9 @@ function App() {
       <nav>
         <NavbarCustom toggleTheme={toggleTheme} theme={theme} />
       </nav>
-      <main className="wrapper mt-16 overflow-hidden-x">
-        <section className="hero relative full-bleed">
-          <div className="absolute inset-0 bg-gradient-to-t from-primary to-secondary">
+      <main className="wrapper mt-16">
+        <section className="hero relative full-bleed h-[90vh]">
+          <div className="absolute inset-0 bg-gradient-to-t from-primary to-secondary overflow-hidden">
             <div className="bg-shape1 bg-primary"></div>
             <div className="bg-shape2 bg-secondary"></div>
             <div className="bg-shape3 bg-primary"></div>
@@ -54,10 +54,10 @@ function App() {
                 <button className="btn btn-secondary">Learn More</button>
               </div>
             </div>
-            <img src={BlenderBlackImage} alt="BlendJet" className="max-w-[80%] max-h-[80%] my-16 sm:my-0 sm:ml-8" />
+            <img src={BlenderBlackImage} alt="BlendJet" className="max-w-[80%] max-h-[80%] my-16 min-w-[270px] sm:my-0 sm:ml-8 overflow-hidden" />
           </div>
         </section>
-        <section className="features my-8">
+        <section className="features my-16">
           <h2 className="text-2xl">Features</h2>
           <ul>
             <li>Perfect for jetting around town</li>
