@@ -41,14 +41,14 @@ function App() {
       </nav>
       <main className="wrapper mt-16 overflow-hidden-x">
         <section className="hero relative full-bleed">
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-primary to-secondary">
             <div className="bg-shape1 bg-primary"></div>
             <div className="bg-shape2 bg-secondary"></div>
             <div className="bg-shape3 bg-primary"></div>
           </div>
           <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full px-4 sm:px-16 sm:justify-between">
             <div className="text-center my-16 sm:text-left sm:my-80">
-              <h1 className= "text-4xl sm:text-5xl font-bold mb-4 dark:text-white">The Original Portable Blender</h1>
+              <h1 className= "text-4xl sm:text-5xl font-bold mb-4 text-white">The Original Portable Blender</h1>
               <div className="flex flex-col sm:flex-row sm:space-x-4">
                 <button className="btn btn-primary mb-4 sm:mb-0">Shop Now</button>
                 <button className="btn btn-secondary">Learn More</button>

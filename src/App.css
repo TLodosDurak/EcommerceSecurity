@@ -22,6 +22,10 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+overflow-hidden-y {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 
 @keyframes move-one {
