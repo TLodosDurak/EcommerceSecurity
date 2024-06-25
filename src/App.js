@@ -8,6 +8,7 @@ import CustomFooter from './CustomFooter';
 import BlenderBlackImage from './lib/assets/BlendJet-2-BLACK.avif';
 import BlenderWhiteImage from './lib/assets/BlendJet-2-White.avif';
 
+
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [theme, setTheme] = useState(getInitialTheme);
@@ -20,8 +21,14 @@ function App() {
     const newTheme = theme === 'lemonade' ? 'halloween' : 'lemonade';
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
+    if (newTheme === 'halloween') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     localStorage.setItem('theme', newTheme);
   };
+  
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -32,13 +39,16 @@ function App() {
       <nav>
         <NavbarCustom toggleTheme={toggleTheme} theme={theme} />
       </nav>
-      <main className="wrapper mt-16">
-        <section className="hero relative overflow-hidden full-bleed bg-gradient-to-r from-primary to-secondary">
-          <div className="absolute top-[-50px] left-0 w-[2000px] h-[400px] rotate-45 bg-primary opacity-70 animate-move-circle radial-gradient blur"></div>
-          <div className="absolute bottom-[-50px] right-0 w-[2000px] h-[400px] rotate-180 bg-secondary opacity-70 animate-move-circle radial-gradient blur"></div>
+      <main className="wrapper mt-16 overflow-hidden-x">
+        <section className="hero relative full-bleed">
+          <div className="absolute inset-0">
+            <div className="bg-shape1 bg-primary"></div>
+            <div className="bg-shape2 bg-secondary"></div>
+            <div className="bg-shape3 bg-primary"></div>
+          </div>
           <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full px-4 sm:px-16 sm:justify-between">
             <div className="text-center my-16 sm:text-left sm:my-80">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">The Original Portable Blender</h1>
+              <h1 className= "text-4xl sm:text-5xl font-bold mb-4 dark:text-white">The Original Portable Blender</h1>
               <div className="flex flex-col sm:flex-row sm:space-x-4">
                 <button className="btn btn-primary mb-4 sm:mb-0">Shop Now</button>
                 <button className="btn btn-secondary">Learn More</button>
