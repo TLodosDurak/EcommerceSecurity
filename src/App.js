@@ -5,6 +5,7 @@ import 'tailwindcss/tailwind.css'; // Ensure Tailwind CSS is imported
 import NavbarCustom from './NavbarCustom';
 import { getInitialTheme } from './lib/themeUtils';
 import CustomFooter from './CustomFooter';
+import BlenderBlackImage from './lib/assets/BlendJet-2-BLACK.avif'; // Add the path to your tshirt image
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -13,6 +14,7 @@ function App() {
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
+
   const toggleTheme = () => {
     const newTheme = theme === 'lemonade' ? 'halloween' : 'lemonade';
     setTheme(newTheme);
@@ -26,22 +28,24 @@ function App() {
 
   return (
     <div className="App">
-        <nav>
-          <NavbarCustom toggleTheme={toggleTheme} theme={theme}/>
-        </nav>
+      <nav>
+        <NavbarCustom toggleTheme={toggleTheme} theme={theme} />
+      </nav>
       <main className="wrapper mt-16">
-        <section className="row-start-1 row-span-1  bg-gradient-to-r from-primary to-secondary full-bleed h-[400px]">
-        </section>
-        <section className="row-start-1 relative my-8">
-          <h2 className="text-3xl text-secondary-content mb-4 text-center">Welcome to Oy Shirts!</h2>
-          <div className="flex flex-grow-1 w-full justify-between row-start-2 row-span-1">
-            <button className="btn btn-primary" onClick={togglePopup}>
-              Buy Now
-            </button>
-            <input type="checkbox" className="checkbox checkbox-xs checkbox-primary mt-4" />
+        <section className="hero relative overflow-hidden full-bleed bg-gradient-to-r from-primary to-secondary">
+          <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary rounded-full opacity-70 animate-move-circle"></div>
+          <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-secondary rounded-full opacity-70 animate-move-circle"></div>
+          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full px-4 sm:px-16 sm:justify-between">
+            <div className=" text-center my-16 sm:text-left sm:my-80 ">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Discover Our New Collection</h1>
+              <div className="flex flex-col sm:flex-row sm:space-x-4">
+                <button className="btn btn-primary mb-4 sm:mb-0">Shop Now</button>
+                <button className="btn btn-secondary">Learn More</button>
+              </div>
+            </div>
+            <img src={BlenderBlackImage} alt="T-shirt" className="w-64 h-64 sm:w-96 sm:h-96 my-16 sm:my-0 sm:ml-8" />
           </div>
         </section>
-
         <section className="features my-8">
           <h2 className="text-2xl">Features</h2>
           <ul>
@@ -51,12 +55,10 @@ function App() {
             <li>Available in two colors: Red and Blue</li>
           </ul>
         </section>
-
         <section className="pricing my-8">
           <h2 className="text-2xl">Pricing</h2>
           <p>Each Oy Shirt is available for $25. Custom designs may have an additional cost.</p>
         </section>
-
         <section className="faq my-8">
           <h2 className="text-2xl">FAQ</h2>
           <ul>
@@ -67,7 +69,6 @@ function App() {
         </section>
       </main>
       <CustomFooter />
-
       {isPopupOpen && <PaymentForm togglePopup={togglePopup} />}
     </div>
   );

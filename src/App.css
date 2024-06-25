@@ -18,3 +18,19 @@
   z-index: 0; /* Ensure it is behind other content */
 }
 
+@keyframes move-circle {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.hero .animate-move-circle {
+  animation: move-circle 10s infinite alternate;
+}

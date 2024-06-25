@@ -12,6 +12,8 @@ function NavbarCustom({ toggleTheme, theme }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // This function is used to handle the theme toggle for the mobile menu
+  // So it can be done when clicking a parent element of dasyui swap
   const handleThemeToggleClick = (e) => {
     e.preventDefault();
     toggleTheme();
