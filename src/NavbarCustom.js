@@ -23,7 +23,7 @@ function NavbarCustom({ toggleTheme, theme }) {
     <div className="fixed top-0 left-0 w-full z-50">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl">Oy Shirts</a>
+          <a className="btn btn-ghost text-xl">blendjet</a>
         </div>
         <div className="navbar-end hidden sm:flex">
           <label className="swap swap-rotate">

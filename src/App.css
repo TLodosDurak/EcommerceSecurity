@@ -31,6 +31,7 @@
   position: relative;
 }
 
-.hero .animate-move-circle {
+.hero .radial-gradient {
+  background: radial-gradient(circle);
   animation: move-circle 10s infinite alternate;
 }
