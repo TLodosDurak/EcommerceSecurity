@@ -46,7 +46,7 @@ function App() {
             <div className="bg-shape2 bg-secondary"></div>
             <div className="bg-shape3 bg-primary"></div>
           </div>
-          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full px-4 sm:px-16 sm:justify-between">
+          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full w-full px-4 sm:px-16 sm:justify-around">
             <div className="text-center my-16 sm:text-left sm:my-80">
               <h1 className= "text-4xl sm:text-5xl font-bold mb-4 text-white">The Original Portable Blender</h1>
               <div className="flex flex-col sm:flex-row sm:space-x-4">
