@@ -54,7 +54,7 @@ function App() {
                 <button className="btn btn-secondary">Learn More</button>
               </div>
             </div>
-            <img src={BlenderBlackImage} alt="BlendJet" className="max-w-[80%] max-h-[80%] my-16 min-w-[270px] sm:my-0 sm:ml-8 " />
+            <img src={BlenderBlackImage} alt="BlendJet" className="max-w-[80%] max-h-[80%] my-16 min-w-[270px] sm:my-0 sm:ml-8" />
           </div>
         </section>
         <section className="features my-16">
