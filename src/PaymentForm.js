@@ -125,30 +125,32 @@ function PaymentForm({ togglePopup }) {
         {submittedData.length > 0 && (
           <div className="mt-4">
             <h4 className="font-bold">Submitted Data</h4>
-            <table className="table-auto w-full mt-4">
-              <thead>
-                <tr>
-                  <th>Card Number</th>
-                  <th>Expiry</th>
-                  <th>CVV</th>
-                  <th>Quantity</th>
-                  <th>Color</th>
-                  <th>Bcrypt</th>
-                </tr>
-              </thead>
-              <tbody>
-                {submittedData.map((data, index) => (
-                  <tr key={index}>
-                    <td>{data.unencrypted.cardNumber}</td>
-                    <td>{data.unencrypted.expiry}</td>
-                    <td>{data.unencrypted.cvv}</td>
-                    <td>{data.unencrypted.quantity}</td>
-                    <td>{data.unencrypted.color}</td>
-                    <td>{data.encrypted.bcrypt}</td>
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full mt-4">
+                <thead>
+                  <tr>
+                    <th className="px-4">Card Number</th>
+                    <th className="px-4">Expiry</th>
+                    <th className="px-4">CVV</th>
+                    <th className="px-4">Quantity</th>
+                    <th className="px-4">Color</th>
+                    <th className="px-4">Bcrypt</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {submittedData.map((data, index) => (
+                    <tr key={index}>
+                      <td className="px-4">{data.unencrypted.cardNumber}</td>
+                      <td className="px-4">{data.unencrypted.expiry}</td>
+                      <td className="px-4">{data.unencrypted.cvv}</td>
+                      <td className="px-4">{data.unencrypted.quantity}</td>
+                      <td className="px-4">{data.unencrypted.color}</td>
+                      <td className="px-4">{data.encrypted.bcrypt}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <div className="mt-4">
               <h4 className="font-bold">Encryption Methods</h4>
               <ul>
